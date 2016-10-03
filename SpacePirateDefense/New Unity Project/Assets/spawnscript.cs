@@ -29,9 +29,10 @@ public class spawnscript : MonoBehaviour {
         if (Rand == 1 && timer <= 0)
         {
 
-            GameObject tempBullet = Instantiate(enemy, spawn1) as GameObject;
+            GameObject tempBullet = Instantiate(enemy, spawn1.position, spawn1.rotation) as GameObject;
             tempBullet.transform.position = spawn1.transform.position;
             tempBullet.transform.rotation = spawn1.transform.rotation;
+            tempBullet.transform.parent = spawn1;
 
             Rand = Random.Range(1, 3);
 
@@ -43,9 +44,11 @@ public class spawnscript : MonoBehaviour {
         {
 
 
-            GameObject tempBullet = Instantiate(enemy, spawn2) as GameObject;
+            GameObject tempBullet = Instantiate(enemy, spawn2.position, spawn2.rotation) as GameObject;
             tempBullet.transform.position = spawn2.transform.position;
             tempBullet.transform.rotation = spawn2.transform.rotation;
+            tempBullet.transform.parent = spawn2;
+
 
             Rand = Random.Range(1, 3);
 
@@ -57,9 +60,11 @@ public class spawnscript : MonoBehaviour {
         {
 
 
-            GameObject tempBullet = Instantiate(enemy, spawn3) as GameObject;
+            GameObject tempBullet = Instantiate(enemy, spawn3.position, spawn3.rotation) as GameObject;
             tempBullet.transform.position = spawn3.transform.position;
             tempBullet.transform.rotation = spawn3.transform.rotation;
+
+            tempBullet.transform.parent = spawn3;
 
             Rand = Random.Range(1, 3);
 
