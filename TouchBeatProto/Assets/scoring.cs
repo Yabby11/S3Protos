@@ -24,7 +24,7 @@ public class scoring : MonoBehaviour {
 
         totalScore = scoreCircle.GetComponent<scoringCircle>().scoreCircle + scoreSquare.GetComponent<scoringSquare>().scoreSquare;
 
-        score.text = "Score: " + score;
+        score.text = "Score: " + totalScore;
 
 	}
 
