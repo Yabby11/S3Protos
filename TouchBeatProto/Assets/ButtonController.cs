@@ -18,12 +18,16 @@ public class ButtonController : MonoBehaviour {
         button2Active = false;
         Button2.SetActive(false);
 
+        Button1.GetComponent<BoxCollider2D>().enabled = false;
+        Button2.GetComponent<BoxCollider2D>().enabled = false;
+
+
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        
+      
 
     }
 
@@ -40,6 +44,7 @@ public class ButtonController : MonoBehaviour {
             Debug.Log("Swap1");
             done = true;
 
+            
             Button1.SetActive(false);
             Button2.SetActive(true);
         }

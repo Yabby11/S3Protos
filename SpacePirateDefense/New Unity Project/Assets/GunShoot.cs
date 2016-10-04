@@ -28,7 +28,8 @@ public class GunShoot : MonoBehaviour
         if (timer <= 0)
         {
 
-           GameObject tempBullet = Instantiate(BulletPrefab, bullets) as GameObject;
+           GameObject tempBullet = Instantiate(BulletPrefab, bullets.position, bullets.rotation) as GameObject;
+            tempBullet.transform.parent = bullets;
             tempBullet.transform.position = muzzle.transform.position;
             tempBullet.transform.rotation = muzzle.transform.rotation;
             timer = 3;
